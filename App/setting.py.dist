@@ -1,0 +1,5 @@
+#MySQL Setting
+MYSQL_SERVER_NAME = 'mysql'
+MYSQL_USER_NAME = 'username'
+MYSQL_PWD = 'password'
+MYSQL_BDD = 'databasename'
