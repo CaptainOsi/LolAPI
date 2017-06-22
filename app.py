@@ -1,6 +1,4 @@
-from flask import Flask
-import
+from Model.NewsRepository import *
 
-app = Flask(__name__)
-if __name__ == '__main__':
-    app.run()
+News = getNewsByID(3)
+print News.id
