@@ -18,13 +18,13 @@ class Promos(Base):
     oldrp = Column(String(50))
     newrp = Column(String(50))
 
-    def __init__(self, url, image, item, startdate, enddate, olrrp, newrp):
+    def __init__(self, url, image, item, startdate, enddate, oldrp, newrp):
         self.url = url
         self.image = image
         self.item = item
         self.startdate = startdate
         self.enddate = enddate
-        self.oldrp = olrrp
+        self.oldrp = oldrp
         self.newrp = newrp
 
     def __repr__(self):
