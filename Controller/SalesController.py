@@ -39,13 +39,15 @@ def getactualsales():
     url = ""
     endate = ""
     startdate = ""
-    for row in sales:
-        url = str(row['url'])
-        endate = str(row['enddate'])
-        startdate = str(row['startdate'])
-    resultList = {'ID': str(row['id']), 'Item': str(row['item']), 'Image': str(row['image']),
+    if sales <> "":
+        for row in sales:
+            url = str(row['url'])
+            endate = str(row['enddate'])
+            startdate = str(row['startdate'])
+            resultList = {'ID': str(row['id']), 'Item': str(row['item']), 'Image': str(row['image']),
                   'Price': str(row['oldrp']), 'Sale': str(row['newrp'])}
-    reqList.append(resultList)
-    resultList = {}
-
+            reqList.append(resultList)
+            resultList = {}
+    if reqList == []:
+        return jsonify({'Error: No current sales'})
     return jsonify({'Url': url, 'Date_end': endate, 'Date_start': startdate}, reqList)
