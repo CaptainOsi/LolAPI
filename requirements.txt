@@ -1,0 +1,6 @@
+Flask
+SQLAlchemy
+Dictalchemy
+Flask_restful
+MySQL-python
+Unidecode
